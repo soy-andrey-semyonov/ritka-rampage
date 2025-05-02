@@ -1,11 +1,11 @@
 [gd_scene load_steps=14 format=3 uid="uid://ck6vo5d385q3c"]
 
-[ext_resource type="Script" path="res://scenes/weapons/pistol/pistol_bullet/pistol_bullet.gd" id="1_haia6"]
+[ext_resource type="Script" uid="uid://csrsdofvg2u0b" path="res://scenes/weapons/pistol/pistol_bullet/pistol_bullet.gd" id="1_haia6"]
 [ext_resource type="Texture2D" uid="uid://bf8p3oelu0s34" path="res://scenes/weapons/pistol/pistol_bullet/bullet.png" id="2_6pqw6"]
 [ext_resource type="PackedScene" uid="uid://jfbffly5rjbc" path="res://scenes/components/health_component.tscn" id="2_i4pkq"]
 [ext_resource type="PackedScene" uid="uid://b151mbj1k8ah8" path="res://scenes/explosion/explosion.tscn" id="2_wcckn"]
 [ext_resource type="PackedScene" uid="uid://dlfndvxca8iiu" path="res://scenes/controllers/statuses/tick_status.tscn" id="3_8ayi0"]
-[ext_resource type="Script" path="res://scenes/weapons/pistol/pistol_bullet/bullet_trail.gd" id="3_38db2"]
+[ext_resource type="Script" uid="uid://xv1irq2ljks6" path="res://scenes/weapons/pistol/pistol_bullet/bullet_trail.gd" id="3_38db2"]
 [ext_resource type="PackedScene" uid="uid://0vth6qt1d50l" path="res://scenes/components/projectile_hurtbox_component.tscn" id="4_hmcoo"]
 [ext_resource type="PackedScene" uid="uid://cryx377fes7t2" path="res://scenes/components/hitbox_component.tscn" id="4_p18sw"]
 [ext_resource type="Texture2D" uid="uid://j0nffnyecxye" path="res://scenes/weapons/pistol/pistol_bullet/shotgun_bullet.png" id="4_ykjm5"]

@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://6xndi4vlwwav"]
 
-[ext_resource type="Script" path="res://scenes/ui/menus/pause_menu.gd" id="1_ffoyu"]
+[ext_resource type="Script" uid="uid://dmr0jtvubexuc" path="res://scenes/ui/menus/pause_menu.gd" id="1_ffoyu"]
 [ext_resource type="PackedScene" uid="uid://5p624wsr7m2d" path="res://scenes/ui/menus/settings_menu.tscn" id="2_dehwt"]
 [ext_resource type="PackedScene" uid="uid://rij5bvmvffnm" path="res://scenes/ui/components/app_button.tscn" id="2_mxojf"]
 
@@ -38,8 +38,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7bqv3"]
 _data = {
-"RESET": SubResource("Animation_sx5pp"),
-"default": SubResource("Animation_ijgn8")
+&"RESET": SubResource("Animation_sx5pp"),
+&"default": SubResource("Animation_ijgn8")
 }
 
 [node name="PauseMenu" type="CanvasLayer"]
@@ -49,7 +49,7 @@ settings_scene = ExtResource("2_dehwt")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_7bqv3")
+&"": SubResource("AnimationLibrary_7bqv3")
 }
 
 [node name="ColorRect" type="ColorRect" parent="."]

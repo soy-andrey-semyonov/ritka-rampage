@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://cnshicqd3b3pl"]
 
-[ext_resource type="Script" path="res://scenes/ui/anvil_timer/anvil_timer.gd" id="1_jjcke"]
+[ext_resource type="Script" uid="uid://bjmnfmg4x75q0" path="res://scenes/ui/anvil_timer/anvil_timer.gd" id="1_jjcke"]
 [ext_resource type="Texture2D" uid="uid://n8kh216i5y5j" path="res://scenes/ui/anvil_timer/anvil_16x16.png" id="2_d5qnq"]
 
 [node name="AnvilTimer" type="CanvasLayer"]

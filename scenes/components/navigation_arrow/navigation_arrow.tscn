@@ -1,6 +1,6 @@
 [gd_scene load_steps=6 format=3 uid="uid://cpwsf0ptkbc0m"]
 
-[ext_resource type="Script" path="res://scenes/components/navigation_arrow/navigation_arrow.gd" id="1_30pro"]
+[ext_resource type="Script" uid="uid://cp2bx8rcq8piq" path="res://scenes/components/navigation_arrow/navigation_arrow.gd" id="1_30pro"]
 [ext_resource type="Texture2D" uid="uid://kjhqgrpiipn0" path="res://scenes/components/navigation_arrow/navigation_arrow.png" id="1_mt0cr"]
 
 [sub_resource type="Animation" id="Animation_ammq0"]
@@ -37,8 +37,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_ur466"]
 _data = {
-"RESET": SubResource("Animation_ammq0"),
-"default": SubResource("Animation_0dmhg")
+&"RESET": SubResource("Animation_ammq0"),
+&"default": SubResource("Animation_0dmhg")
 }
 
 [node name="NavigationArrow" type="Node2D"]

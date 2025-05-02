@@ -1,6 +1,6 @@
 [gd_resource type="Resource" script_class="PistolUpgrade" load_steps=2 format=3 uid="uid://cj2gajfd4cdys"]
 
-[ext_resource type="Script" path="res://resources/upgrades/weapon_upgrades/pistol/pistol_upgrade.gd" id="1_ps4m0"]
+[ext_resource type="Script" uid="uid://c0n6t4q2w7c7g" path="res://resources/upgrades/weapon_upgrades/pistol/pistol_upgrade.gd" id="1_ps4m0"]
 
 [resource]
 script = ExtResource("1_ps4m0")

@@ -12,6 +12,7 @@ signal back_pressed
 
 
 func _ready() -> void:
+	back_button.grab_focus()
 	sfx_slider.value_changed.connect(on_slider_volume_changed.bind(Constants.AUDIO_BUSES.SFX))
 	music_slider.value_changed.connect(on_slider_volume_changed.bind(Constants.AUDIO_BUSES.Music))
 	window_mode_button.pressed.connect(on_window_mode_pressed)
@@ -65,6 +66,9 @@ func on_window_mode_pressed():
 		
 	update_window_mode_display()
 	
+func _unhandled_input(event):
+	if event.is_action_pressed("ui_cancel"):
+		on_back_pressed()
 
 func on_back_pressed():
 	back_pressed.emit()

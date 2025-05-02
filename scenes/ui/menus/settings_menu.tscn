@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=3 uid="uid://5p624wsr7m2d"]
 
 [ext_resource type="PackedScene" uid="uid://rij5bvmvffnm" path="res://scenes/ui/components/app_button.tscn" id="1_2q4dh"]
-[ext_resource type="Script" path="res://scenes/ui/menus/settings_menu.gd" id="1_r4niq"]
+[ext_resource type="Script" uid="uid://d2jk8rrmqxbie" path="res://scenes/ui/menus/settings_menu.gd" id="1_r4niq"]
 [ext_resource type="PackedScene" uid="uid://dwq1a2sardnvl" path="res://scenes/ui/components/app_slider.tscn" id="2_lo7k2"]
 
 [node name="SettingsMenu" type="CanvasLayer"]

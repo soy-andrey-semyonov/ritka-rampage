@@ -1,7 +1,7 @@
 [gd_scene load_steps=25 format=3 uid="uid://dwmlg050i08ac"]
 
 [ext_resource type="PackedScene" uid="uid://jfbffly5rjbc" path="res://scenes/components/health_component.tscn" id="1_u3ehd"]
-[ext_resource type="Script" path="res://scenes/game_object/enemy/stubborn_cow/stubborn_cow.gd" id="1_xloy4"]
+[ext_resource type="Script" uid="uid://bhl3nbd8d1xe8" path="res://scenes/game_object/enemy/stubborn_cow/stubborn_cow.gd" id="1_xloy4"]
 [ext_resource type="PackedScene" uid="uid://cdmwpfegixcco" path="res://scenes/components/orange_drop_component.tscn" id="2_cgo28"]
 [ext_resource type="PackedScene" uid="uid://0fecexi8j7gb" path="res://scenes/game_object/orange/orange.tscn" id="3_273m8"]
 [ext_resource type="PackedScene" uid="uid://gbwjb2qhqvk0" path="res://scenes/manager/statuses/status_manager.tscn" id="3_an4rr"]
@@ -166,11 +166,11 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_nqhs1"]
 _data = {
-"RESET": SubResource("Animation_y3f4j"),
-"bull_rush": SubResource("Animation_7qg7j"),
-"die": SubResource("Animation_sugfy"),
-"move": SubResource("Animation_oejwb"),
-"prepare_attack": SubResource("Animation_4hros")
+&"RESET": SubResource("Animation_y3f4j"),
+&"bull_rush": SubResource("Animation_7qg7j"),
+&"die": SubResource("Animation_sugfy"),
+&"move": SubResource("Animation_oejwb"),
+&"prepare_attack": SubResource("Animation_4hros")
 }
 
 [node name="StubbornCow" type="CharacterBody2D"]

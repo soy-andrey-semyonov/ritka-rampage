@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://vpugf0fbno2e"]
 
-[ext_resource type="Script" path="res://scenes/weapons/pistol/pistol.gd" id="1_8fjpu"]
+[ext_resource type="Script" uid="uid://dmq6r0bg23hch" path="res://scenes/weapons/pistol/pistol.gd" id="1_8fjpu"]
 [ext_resource type="PackedScene" uid="uid://ck6vo5d385q3c" path="res://scenes/weapons/pistol/pistol_bullet/pistol_bullet.tscn" id="2_wilu3"]
 [ext_resource type="PackedScene" uid="uid://5bgd5f5e6522" path="res://scenes/weapons/pistol/variants/shotgun_variant.tscn" id="3_karkw"]
 [ext_resource type="Resource" uid="uid://qst0kq5he2eh" path="res://resources/upgrades/weapon_upgrades/pistol/pistol_upgrades_pool.tres" id="3_v7bp6"]

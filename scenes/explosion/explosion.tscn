@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://b151mbj1k8ah8"]
 
-[ext_resource type="Script" path="res://scenes/explosion/explosion.gd" id="1_p6m3e"]
+[ext_resource type="Script" uid="uid://ugugm8ljhat0" path="res://scenes/explosion/explosion.gd" id="1_p6m3e"]
 [ext_resource type="PackedScene" uid="uid://cryx377fes7t2" path="res://scenes/components/hitbox_component.tscn" id="2_s0qrb"]
 [ext_resource type="AudioStream" uid="uid://bjh4t66der71s" path="res://scenes/explosion/explosion.wav" id="3_tkncb"]
 
@@ -83,8 +83,8 @@ tracks/2/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_alhjk"]
 _data = {
-"RESET": SubResource("Animation_fv827"),
-"default": SubResource("Animation_3xgdv")
+&"RESET": SubResource("Animation_fv827"),
+&"default": SubResource("Animation_3xgdv")
 }
 
 [node name="Explosion" type="Node2D"]

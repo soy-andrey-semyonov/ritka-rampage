@@ -1,11 +1,10 @@
 [gd_scene load_steps=8 format=3 uid="uid://ckcj3wwxivfbr"]
 
-[ext_resource type="Script" path="res://scenes/components/death_component.gd" id="1_gsv3v"]
+[ext_resource type="Script" uid="uid://d1eh1p7fepk5x" path="res://scenes/components/death_component.gd" id="1_gsv3v"]
 [ext_resource type="Texture2D" uid="uid://dw6tqbe2ry1kk" path="res://scenes/game_object/enemy/bunny/soul.png" id="2_06tyd"]
 
 [sub_resource type="Curve" id="Curve_geq4y"]
-min_value = -0.2
-max_value = 0.2
+_limits = [-0.2, 0.2, 0.0, 1.0]
 _data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(1e-05, 0.2), 0.0, 0.0, 0, 0, Vector2(0.481553, -0.0764686), 0.0, 0.0, 0, 0, Vector2(0.99999, 0.0557926), 0.0, 0.0, 0, 0, Vector2(1, 1), 0.0, 0.0, 0, 0]
 point_count = 5
 
@@ -58,8 +57,8 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_tk3up"]
 _data = {
-"RESET": SubResource("Animation_1i45l"),
-"default": SubResource("Animation_iiq8j")
+&"RESET": SubResource("Animation_1i45l"),
+&"default": SubResource("Animation_iiq8j")
 }
 
 [node name="DeathComponent" type="Node2D"]

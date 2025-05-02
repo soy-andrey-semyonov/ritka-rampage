@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://biyftkstxyn66"]
 
-[ext_resource type="Script" path="res://scenes/game_object/anvil/anvil.gd" id="1_ewge8"]
+[ext_resource type="Script" uid="uid://bcvilh3pak6va" path="res://scenes/game_object/anvil/anvil.gd" id="1_ewge8"]
 [ext_resource type="Texture2D" uid="uid://bkf61twolj2q" path="res://scenes/game_object/anvil/anvil.png" id="2_8atnx"]
 [ext_resource type="AudioStream" uid="uid://f6cy3op6ovat" path="res://scenes/game_object/anvil/spawn_sound.wav" id="3_gptgy"]
 
@@ -104,9 +104,9 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_gd03k"]
 _data = {
-"RESET": SubResource("Animation_d76r2"),
-"idle": SubResource("Animation_rwee4"),
-"spawn": SubResource("Animation_odevx")
+&"RESET": SubResource("Animation_d76r2"),
+&"idle": SubResource("Animation_rwee4"),
+&"spawn": SubResource("Animation_odevx")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_pv2e1"]

@@ -1,10 +1,11 @@
 [gd_resource type="Resource" script_class="PistolUpgrade" load_steps=2 format=3 uid="uid://djamg450tr134"]
 
-[ext_resource type="Script" path="res://resources/upgrades/weapon_upgrades/pistol/pistol_upgrade.gd" id="1_hctyc"]
+[ext_resource type="Script" uid="uid://c0n6t4q2w7c7g" path="res://resources/upgrades/weapon_upgrades/pistol/pistol_upgrade.gd" id="1_hctyc"]
 
 [resource]
 script = ExtResource("1_hctyc")
 id = 2
+incompatible_uprades = Array[int]([])
 title = "Improved Ballistics"
 weapon = 0
 max_quantity = 5

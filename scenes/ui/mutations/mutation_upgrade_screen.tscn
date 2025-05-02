@@ -1,6 +1,6 @@
 [gd_scene load_steps=7 format=3 uid="uid://b4tmea22onhpt"]
 
-[ext_resource type="Script" path="res://scenes/ui/mutations/mutation_upgrade_screen.gd" id="1_2yi1q"]
+[ext_resource type="Script" uid="uid://03m2uivvqfes" path="res://scenes/ui/mutations/mutation_upgrade_screen.gd" id="1_2yi1q"]
 [ext_resource type="PackedScene" uid="uid://02wtk3gkbpmn" path="res://scenes/ui/mutations/mutation_upgrade_card.tscn" id="2_q15yy"]
 
 [sub_resource type="Animation" id="Animation_sx5pp"]
@@ -54,9 +54,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_7bqv3"]
 _data = {
-"RESET": SubResource("Animation_sx5pp"),
-"in": SubResource("Animation_ijgn8"),
-"out": SubResource("Animation_ktl2w")
+&"RESET": SubResource("Animation_sx5pp"),
+&"in": SubResource("Animation_ijgn8"),
+&"out": SubResource("Animation_ktl2w")
 }
 
 [node name="MutationUpgradeScreen" type="CanvasLayer"]
@@ -69,7 +69,7 @@ autoplay = true
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_7bqv3")
+&"": SubResource("AnimationLibrary_7bqv3")
 }
 autoplay = "in"
 

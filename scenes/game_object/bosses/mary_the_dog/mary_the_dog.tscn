@@ -1,7 +1,7 @@
 [gd_scene load_steps=28 format=3 uid="uid://bi4h74wlxjtot"]
 
 [ext_resource type="PackedScene" uid="uid://cwatwkjukjlvd" path="res://scenes/components/hurtbox_component.tscn" id="1_3y2o2"]
-[ext_resource type="Script" path="res://scenes/game_object/bosses/mary_the_dog/mary_the_dog.gd" id="1_p142c"]
+[ext_resource type="Script" uid="uid://beepoy54eil41" path="res://scenes/game_object/bosses/mary_the_dog/mary_the_dog.gd" id="1_p142c"]
 [ext_resource type="Texture2D" uid="uid://bmk4agbwrmr42" path="res://scenes/game_object/bosses/mary_the_dog/mary_the_dog_white.png" id="2_4jnp8"]
 [ext_resource type="PackedScene" uid="uid://dlfndvxca8iiu" path="res://scenes/controllers/statuses/tick_status.tscn" id="2_apwff"]
 [ext_resource type="PackedScene" uid="uid://ceo6q5oos0dqn" path="res://scenes/components/velocity_component.tscn" id="3_lkt6i"]
@@ -220,10 +220,10 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_xb03g"]
 _data = {
-"RESET": SubResource("Animation_xhcsc"),
-"bite": SubResource("Animation_ut7cu"),
-"die": SubResource("Animation_vinth"),
-"run": SubResource("Animation_82dio")
+&"RESET": SubResource("Animation_xhcsc"),
+&"bite": SubResource("Animation_ut7cu"),
+&"die": SubResource("Animation_vinth"),
+&"run": SubResource("Animation_82dio")
 }
 
 [node name="MaryTheDog" type="CharacterBody2D" groups=["enemy"]]

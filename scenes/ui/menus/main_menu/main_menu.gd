@@ -10,6 +10,7 @@ extends CanvasLayer
 
 
 func _ready() -> void:
+	play_button.grab_focus()  # Set initial focus
 	play_button.pressed.connect(on_play_pressed)
 	settings_button.pressed.connect(on_settings_pressed)
 	quit_button.pressed.connect(on_quit_pressed)
@@ -24,8 +25,11 @@ func on_settings_pressed():
 	add_child(settings_menu_instance)
 	settings_menu_instance.set_ui_position(Constants.UIPositions.RIGHT)
 	
-	settings_menu_instance.back_pressed.connect(settings_menu_instance.queue_free)
+	settings_menu_instance.back_pressed.connect(on_settings_back_pressed.bind(settings_menu_instance))
 	
+func on_settings_back_pressed(settings_menu: SettingsMenu):
+	settings_menu.queue_free()
+	settings_button.grab_focus()
 
 func on_quit_pressed():
 	get_tree().quit()

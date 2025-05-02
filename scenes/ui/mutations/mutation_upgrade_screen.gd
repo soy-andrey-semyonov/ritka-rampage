@@ -16,6 +16,7 @@ func _ready():
 
 func set_mutation_upgrades(upgrades: Array[MutationUpgrade]):
 	var delay := 0.0
+	var i = 0
 	for upgrade in upgrades:
 		var upgrade_card = upgrade_card_scene.instantiate() as MutationUpgradeCard
 		upgrade_card_container.add_child(upgrade_card)
@@ -23,7 +24,12 @@ func set_mutation_upgrades(upgrades: Array[MutationUpgrade]):
 		upgrade_card.selected.connect(on_upgrade_selected.bind(upgrade))
 		
 		upgrade_card.animator_component.play_in(delay)
+		if i == 0:
+			upgrade_card.grab_focus()
+			if Controller.using_controller:
+				upgrade_card.on_mouse_entered()
 		delay += 0.1
+		i+=1
 		
 
 func on_upgrade_selected(upgrade: MutationUpgrade):

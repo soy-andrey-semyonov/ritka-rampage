@@ -1,6 +1,6 @@
 [gd_scene load_steps=8 format=3 uid="uid://cnyj1ny44kukg"]
 
-[ext_resource type="Script" path="res://scenes/weapons/pistol/variants/pistol_weapon_variant.gd" id="1_svp3r"]
+[ext_resource type="Script" uid="uid://c182hq06nl0hd" path="res://scenes/weapons/pistol/variants/pistol_weapon_variant.gd" id="1_svp3r"]
 [ext_resource type="Texture2D" uid="uid://cwk4lvfawo8db" path="res://scenes/weapons/pistol/pistol.png" id="2_n26q6"]
 [ext_resource type="AudioStream" uid="uid://bb8pliwdcj7wg" path="res://scenes/weapons/pistol/sfx/shot.wav" id="3_nymtb"]
 
@@ -51,9 +51,9 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_f5i2q"]
 _data = {
-"RESET": SubResource("Animation_un0xr"),
-"default": SubResource("Animation_hr3ij"),
-"shoot": SubResource("Animation_3twrf")
+&"RESET": SubResource("Animation_un0xr"),
+&"default": SubResource("Animation_hr3ij"),
+&"shoot": SubResource("Animation_3twrf")
 }
 
 [node name="DefaultVariant" type="Node2D" node_paths=PackedStringArray("shoot_position", "animation_player")]

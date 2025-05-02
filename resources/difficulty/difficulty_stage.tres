@@ -1,6 +1,10 @@
-[gd_resource type="Resource" load_steps=2 format=3 uid="uid://du5r3g8jscjxw"]
+[gd_resource type="Resource" script_class="DifficultyStage" load_steps=3 format=3 uid="uid://du5r3g8jscjxw"]
 
-[ext_resource type="Script" path="res://resources/difficulty/difficulty_stage.gd" id="1_64sgb"]
+[ext_resource type="Script" uid="uid://1qvjakx8oy30" path="res://resources/difficulty/difficulty_stage.gd" id="1_64sgb"]
+[ext_resource type="Script" uid="uid://c7txisn2yubj" path="res://resources/difficulty/enemy_spawn_config.gd" id="1_ngl40"]
 
 [resource]
 script = ExtResource("1_64sgb")
+enemy_spawn_configs = Array[ExtResource("1_ngl40")]([])
+difficulty_level = 0
+time_to_spawn = 1.0

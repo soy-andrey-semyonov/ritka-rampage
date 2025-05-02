@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://dwq1a2sardnvl"]
 
-[ext_resource type="Script" path="res://scenes/ui/components/app_slider.gd" id="1_67wjr"]
+[ext_resource type="Script" uid="uid://dxbtga6wx8hm0" path="res://scenes/ui/components/app_slider.gd" id="1_67wjr"]
 [ext_resource type="AudioStream" uid="uid://cpvpicfbawy0i" path="res://assets/audio/sfx/button_click.ogg" id="2_621ub"]
 
 [node name="SfxSlider" type="HSlider"]

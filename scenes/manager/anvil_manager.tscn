@@ -1,6 +1,6 @@
 [gd_scene load_steps=3 format=3 uid="uid://wxjex0i2dwww"]
 
-[ext_resource type="Script" path="res://scenes/manager/anvil_manager.gd" id="1_v7ug4"]
+[ext_resource type="Script" uid="uid://bsan3of8oehem" path="res://scenes/manager/anvil_manager.gd" id="1_v7ug4"]
 [ext_resource type="PackedScene" uid="uid://biyftkstxyn66" path="res://scenes/game_object/anvil/anvil.tscn" id="2_g352g"]
 
 [node name="AnvilManager" type="Node"]

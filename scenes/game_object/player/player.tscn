@@ -1,7 +1,7 @@
 [gd_scene load_steps=26 format=3 uid="uid://opwxpmnb8voa"]
 
 [ext_resource type="Texture2D" uid="uid://yr54tlu3thkq" path="res://scenes/game_object/player/ritka.png" id="1_aes1j"]
-[ext_resource type="Script" path="res://scenes/game_object/player/player.gd" id="1_snu1q"]
+[ext_resource type="Script" uid="uid://dq1uot14jqaaq" path="res://scenes/game_object/player/player.gd" id="1_snu1q"]
 [ext_resource type="PackedScene" uid="uid://jfbffly5rjbc" path="res://scenes/components/health_component.tscn" id="2_tfpur"]
 [ext_resource type="Texture2D" uid="uid://51ngtrd3m3x6" path="res://scenes/components/ground_shadow/shadow.png" id="3_6ka02"]
 [ext_resource type="PackedScene" uid="uid://cwatwkjukjlvd" path="res://scenes/components/hurtbox_component.tscn" id="3_477au"]
@@ -158,10 +158,10 @@ tracks/1/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_1615c"]
 _data = {
-"RESET": SubResource("Animation_xh0by"),
-"idle": SubResource("Animation_ua7qg"),
-"run": SubResource("Animation_h1ibp"),
-"walk": SubResource("Animation_p8w2y")
+&"RESET": SubResource("Animation_xh0by"),
+&"idle": SubResource("Animation_ua7qg"),
+&"run": SubResource("Animation_h1ibp"),
+&"walk": SubResource("Animation_p8w2y")
 }
 
 [sub_resource type="Animation" id="Animation_jo5s5"]
@@ -198,8 +198,8 @@ tracks/0/keys = {
 
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_fgfrt"]
 _data = {
-"RESET": SubResource("Animation_jo5s5"),
-"hurt": SubResource("Animation_fybrk")
+&"RESET": SubResource("Animation_jo5s5"),
+&"hurt": SubResource("Animation_fybrk")
 }
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_tjwd4"]
