@@ -250,13 +250,13 @@ stream = ExtResource("9_7o8dv")
 
 [node name="AnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_1615c")
+&"": SubResource("AnimationLibrary_1615c")
 }
 autoplay = "idle"
 
 [node name="HudAnimationPlayer" type="AnimationPlayer" parent="."]
 libraries = {
-"": SubResource("AnimationLibrary_fgfrt")
+&"": SubResource("AnimationLibrary_fgfrt")
 }
 
 [node name="Visuals" type="Node2D" parent="."]
@@ -323,3 +323,5 @@ position = Vector2(-1, -5)
 [node name="NavigationArrow" parent="NavigationArrowRotationPivot" node_paths=PackedStringArray("rotation_pivot") instance=ExtResource("12_xucbj")]
 position = Vector2(19, 5)
 rotation_pivot = NodePath("..")
+
+[node name="VisibleOnScreenNotifier2D" type="VisibleOnScreenNotifier2D" parent="."]

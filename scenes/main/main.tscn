@@ -14,7 +14,6 @@
 [ext_resource type="PackedScene" uid="uid://cobi6d0h2keep" path="res://scenes/manager/experience_manager.tscn" id="6_8mjvm"]
 [ext_resource type="TileSet" uid="uid://b5jwrivhevsl6" path="res://resources/tileset.tres" id="6_a6vb0"]
 [ext_resource type="Script" uid="uid://1qvjakx8oy30" path="res://resources/difficulty/difficulty_stage.gd" id="7_0n4ps"]
-[ext_resource type="PackedScene" uid="uid://opwxpmnb8voa" path="res://scenes/game_object/player/player.tscn" id="7_nxmj7"]
 [ext_resource type="PackedScene" uid="uid://bwsxcvg8tgsku" path="res://scenes/game_object/enemy/bunny/bunny.tscn" id="8_0au5e"]
 [ext_resource type="PackedScene" uid="uid://dn4ekvcuqpp12" path="res://scenes/manager/difficulty_manager.tscn" id="8_fj7m4"]
 [ext_resource type="PackedScene" uid="uid://cnshicqd3b3pl" path="res://scenes/ui/anvil_timer/anvil_timer.tscn" id="8_mcwaw"]
@@ -25,6 +24,7 @@
 [ext_resource type="PackedScene" uid="uid://dwmlg050i08ac" path="res://scenes/game_object/enemy/stubborn_cow/stubborn_cow.tscn" id="11_kh17f"]
 [ext_resource type="PackedScene" uid="uid://wxjex0i2dwww" path="res://scenes/manager/anvil_manager.tscn" id="20_f3wcp"]
 [ext_resource type="PackedScene" uid="uid://d2a52b2apau0v" path="res://scenes/manager/upgrades/weapon_upgrade_manager.tscn" id="20_n7c20"]
+[ext_resource type="Script" uid="uid://csabw5gpe7tyf" path="res://scenes/manager/player_manager.gd" id="22_6llfj"]
 
 [sub_resource type="Resource" id="Resource_si3j4"]
 script = ExtResource("8_rp34t")
@@ -157,6 +157,10 @@ experience_manager = NodePath("../ExperienceManager")
 
 [node name="AnvilManager" parent="Managers" instance=ExtResource("20_f3wcp")]
 
+[node name="PlayerManager" type="Node" parent="Managers"]
+script = ExtResource("22_6llfj")
+metadata/_custom_type_script = "uid://csabw5gpe7tyf"
+
 [node name="GameCamera" parent="." instance=ExtResource("2_ipo2b")]
 position = Vector2(-57, -16)
 
@@ -176,10 +180,6 @@ tile_set = ExtResource("6_a6vb0")
 
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
 y_sort_enabled = true
-
-[node name="Player" parent="Entities" instance=ExtResource("7_nxmj7")]
-unique_name_in_owner = true
-position = Vector2(-28, 12)
 
 [node name="Bushes" type="Node2D" parent="Entities"]
 y_sort_enabled = true

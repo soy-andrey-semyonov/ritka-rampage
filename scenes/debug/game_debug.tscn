@@ -1,10 +1,10 @@
 [gd_scene load_steps=8 format=4 uid="uid://dte4tqajd1cdo"]
 
 [ext_resource type="PackedScene" uid="uid://ddkuoft8656d3" path="res://scenes/cache/particles_cache.tscn" id="1_8j0tc"]
-[ext_resource type="PackedScene" uid="uid://opwxpmnb8voa" path="res://scenes/game_object/player/player.tscn" id="1_13yh6"]
 [ext_resource type="PackedScene" uid="uid://cobi6d0h2keep" path="res://scenes/manager/experience_manager.tscn" id="2_2l5ln"]
 [ext_resource type="PackedScene" uid="uid://d2a52b2apau0v" path="res://scenes/manager/upgrades/weapon_upgrade_manager.tscn" id="2_hvkir"]
 [ext_resource type="PackedScene" uid="uid://bmkeplc4w76hm" path="res://scenes/manager/upgrades/mutation_upgrade_manager.tscn" id="3_glcit"]
+[ext_resource type="Script" uid="uid://csabw5gpe7tyf" path="res://scenes/manager/player_manager.gd" id="4_x5jn8"]
 [ext_resource type="TileSet" uid="uid://b5jwrivhevsl6" path="res://resources/tileset.tres" id="5_opg4v"]
 [ext_resource type="PackedScene" uid="uid://bwsxcvg8tgsku" path="res://scenes/game_object/enemy/bunny/bunny.tscn" id="7_pn0bf"]
 
@@ -18,6 +18,10 @@
 
 [node name="MutationUpgradeManager" parent="Managers" node_paths=PackedStringArray("experience_manager") instance=ExtResource("3_glcit")]
 experience_manager = NodePath("../ExperienceManager")
+
+[node name="PlayerManager" type="Node" parent="Managers"]
+script = ExtResource("4_x5jn8")
+metadata/_custom_type_script = "uid://csabw5gpe7tyf"
 
 [node name="ParticlesCache" parent="." instance=ExtResource("1_8j0tc")]
 position = Vector2(-90, -108)
@@ -41,8 +45,6 @@ tile_map_data = PackedByteArray("AAD7/woAAAAAAAMAAAACAAgAAAAAAAMAAAD4//r/AAAAAAM
 tile_set = ExtResource("5_opg4v")
 
 [node name="Entities" type="Node2D" parent="." groups=["entities_layer"]]
-
-[node name="Player" parent="Entities" instance=ExtResource("1_13yh6")]
 
 [node name="Bunny" parent="Entities" instance=ExtResource("7_pn0bf")]
 position = Vector2(-121, -85)

@@ -13,10 +13,6 @@ fade_time = 1.0
 stream_count = 1
 stream_0 = ExtResource("4_qd6dr")
 
-[sub_resource type="AtlasTexture" id="AtlasTexture_17d7n"]
-atlas = ExtResource("7_j3bhj")
-region = Rect2(1280, 0, 640, 360)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_x6rji"]
 atlas = ExtResource("7_j3bhj")
 region = Rect2(0, 0, 640, 360)
@@ -24,6 +20,10 @@ region = Rect2(0, 0, 640, 360)
 [sub_resource type="AtlasTexture" id="AtlasTexture_ii5qn"]
 atlas = ExtResource("7_j3bhj")
 region = Rect2(640, 0, 640, 360)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_17d7n"]
+atlas = ExtResource("7_j3bhj")
+region = Rect2(1280, 0, 640, 360)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4qw88"]
 atlas = ExtResource("7_j3bhj")
@@ -72,7 +72,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-texture = SubResource("AtlasTexture_17d7n")
+texture = SubResource("AtlasTexture_x6rji")
 script = ExtResource("7_lv2uk")
 sprite_frames = SubResource("SpriteFrames_mor7a")
 

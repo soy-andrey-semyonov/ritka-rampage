@@ -10,6 +10,7 @@ signal game_paused(is_paused: bool)
 signal arena_timeout
 signal enemy_died
 signal no_enemies_left
+signal no_players_left
 
 
 func emit_orange_energy_collected(amount: float):
@@ -46,6 +47,9 @@ func emit_enemy_died():
 	
 func emit_no_enemies_left():
 	no_enemies_left.emit()
+	
+func emit_no_players_left():
+	no_players_left.emit()
 
 	
 func emit_anvil_spawned():

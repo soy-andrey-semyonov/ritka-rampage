@@ -4,6 +4,7 @@ const BASE_RUN_SPEED = 125.0
 const BASE_MOVE_SPEED = 75.0
 const ACCELERATION_SMOOTHING = 15
 
+@export var player_id := 1
 @export var initial_weapon_scene: PackedScene
 var is_shooting := false
 var mutations_count: Dictionary = {}
@@ -20,6 +21,10 @@ var state_machine := CallableStateMachine.new()
 @onready var shooting_state_change_timer: Timer = $ShootingStateChangeTimer
 @onready var hurt_sound: AudioStreamPlayer = $SFX/HurtSound
 @onready var hud_animation_player: AnimationPlayer = $HudAnimationPlayer
+@onready var visible_on_screen_notifier: VisibleOnScreenNotifier2D = $VisibleOnScreenNotifier2D
+
+signal player_ready(player)
+signal player_exited_screen(player)
 
 
 func _ready():
@@ -34,14 +39,23 @@ func _ready():
 	
 	weapon_controller.set_weapon(initial_weapon_scene)
 	
+	visible_on_screen_notifier.screen_exited.connect(_on_screen_exited)
+	
+	emit_signal("player_ready", self)
+	
+func _on_screen_exited():
+	return emit_signal("player_exited_screen", self)
+	
 
 func _physics_process(delta: float):
 	state_machine.update()
 	shoot()
 		
-		
 func shoot():
-	if Input.is_action_pressed('fire'):
+	var shoot_action = 'fire'
+	if player_id == 2:
+		shoot_action = 'p2_fire'
+	if Input.is_action_pressed(shoot_action):
 		shooting_state_change_timer.start()
 		is_shooting = true
 		weapon_controller.shoot()
@@ -57,8 +71,10 @@ func flip():
 		
 		
 func get_movement_direction() -> Vector2:
+	if player_id == 2:
+		return Input.get_vector('p2_move_left', 'p2_move_right', 'p2_move_top', 'p2_move_down')
+	
 	return Input.get_vector('move_left', 'move_right', 'move_top', 'move_down')
-		
 		
 func move():
 	var direction = get_movement_direction()
@@ -68,8 +84,7 @@ func move():
 	velocity_component.max_speed = speed
 	velocity_component.accelerate_in_direction(direction)
 	velocity_component.move()
-		
-
+	
 #region States
 func exit_state_idle():
 	shooting_state_change_timer.stop()
