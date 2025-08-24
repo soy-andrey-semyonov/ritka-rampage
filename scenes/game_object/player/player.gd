@@ -101,7 +101,12 @@ func state_moving():
 		weapon_controller.visible = true
 		animation_player.play("walk")
 	else:
-		weapon_controller.visible = false
+		if Controller.using_controller == false:
+			weapon_controller.visible = false
+		else:
+			#show weapon if controller is used for aiming
+			#in case visible was toggled off by keyboard and swithed to controller
+			weapon_controller.visible = true
 		animation_player.play("run")
 #endregion
 

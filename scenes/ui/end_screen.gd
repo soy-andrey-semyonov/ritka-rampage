@@ -6,7 +6,8 @@ var is_lose_screen := false
 @onready var panel_container: PanelContainer = $PanelContainer
 @onready var lose_sound: AudioStreamPlayer = $LoseSound
 @onready var win_sound: AudioStreamPlayer = $WinSound
-
+@onready var restart_button: Button = %RestartButton
+@onready var quit_button: Button = %QuitButton
 
 func _ready():
 	GlobalActions.pause_game()
@@ -19,9 +20,10 @@ func _ready():
 	var tween = create_tween()
 	tween.tween_property(panel_container, "scale", Vector2.ONE, 0.3) \
 			.set_ease(Tween.EASE_OUT).set_trans(Tween.TRANS_BACK)
-	
-	%RestartButton.pressed.connect(on_restart_button_pressed)
-	%QuitButton.pressed.connect(on_quit_button_pressed)
+
+	restart_button.grab_focus()	
+	restart_button.pressed.connect(on_restart_button_pressed)
+	quit_button.pressed.connect(on_quit_button_pressed)
 	
 	
 func play_screen_sound():

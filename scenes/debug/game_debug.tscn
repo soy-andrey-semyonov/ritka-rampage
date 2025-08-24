@@ -47,19 +47,19 @@ tile_set = ExtResource("5_opg4v")
 [node name="Bunny" parent="Entities" instance=ExtResource("7_pn0bf")]
 position = Vector2(-121, -85)
 
-[node name="HealthComponent" parent="Entities/Bunny" index="0"]
+[node name="HealthComponent" parent="Entities/Bunny" index="1"]
 max_health = 50.0
 
-[node name="VelocityComponent" parent="Entities/Bunny" index="2"]
+[node name="VelocityComponent" parent="Entities/Bunny" index="3"]
 max_speed = 0.0
 
 [node name="Bunny2" parent="Entities" instance=ExtResource("7_pn0bf")]
 position = Vector2(-73, -47)
 
-[node name="HealthComponent" parent="Entities/Bunny2" index="0"]
+[node name="HealthComponent" parent="Entities/Bunny2" index="1"]
 max_health = 50.0
 
-[node name="VelocityComponent" parent="Entities/Bunny2" index="2"]
+[node name="VelocityComponent" parent="Entities/Bunny2" index="3"]
 max_speed = 0.0
 
 [node name="Foreground" type="Node2D" parent="." groups=["foreground_layer"]]

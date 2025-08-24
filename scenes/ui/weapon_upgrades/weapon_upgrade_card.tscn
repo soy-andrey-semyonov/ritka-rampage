@@ -10,6 +10,7 @@ custom_minimum_size = Vector2(150, 200)
 offset_right = 150.0
 offset_bottom = 150.0
 pivot_offset = Vector2(75, 100)
+focus_mode = 2
 mouse_default_cursor_shape = 2
 theme_type_variation = &"WUStatPanelContainer"
 script = ExtResource("1_4c2uk")

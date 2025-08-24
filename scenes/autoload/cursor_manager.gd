@@ -16,5 +16,13 @@ func _ready() -> void:
 	
 	
 func _update_cursors() -> void:
+	Controller.connect("input_method_changed",_on_input_method_changed)
 	Input.set_custom_mouse_cursor(default_texture, Input.CURSOR_ARROW, Vector2(cursor_offset, cursor_offset))
 	Input.set_custom_mouse_cursor(default_texture, Input.CURSOR_POINTING_HAND, Vector2(cursor_offset, cursor_offset))
+	
+func _on_input_method_changed(using_controller: bool):
+	print("changing cursor ",using_controller)
+	if using_controller:
+		Input.set_mouse_mode(Input.MOUSE_MODE_HIDDEN)
+	else:
+		Input.set_mouse_mode(Input.MOUSE_MODE_VISIBLE)

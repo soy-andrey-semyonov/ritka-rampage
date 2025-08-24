@@ -5,13 +5,16 @@ var weapon: Weapon
 
 @onready var weapon_position: Node2D = $WeaponPosition
 
-
 func _physics_process(delta):
-	var mouse_position = get_global_mouse_position()
-	look_at(mouse_position)
 	
+	if Controller.using_controller:
+		var vector = Input.get_vector("aim_left", "aim_right", "aim_up", "aim_down")
+		rotation = vector.angle()
+	else:
+		var vector = get_global_mouse_position()
+		look_at(vector)
+
 	weapon_position.scale.y = -1 if abs(global_rotation_degrees) >= 90 else 1
-	
 	
 func shoot():
 	if weapon is Weapon:

@@ -48,7 +48,7 @@ func select_card():
 	
 	
 func on_gui_input(event: InputEvent):
-	if event.is_action_pressed('left_click'):
+	if event.is_action_pressed('left_click') or event.is_action_pressed('ui_accept'):
 		select_card()
 
 
@@ -60,7 +60,6 @@ func on_mouse_entered():
 	
 	animator_component.play_hover_in()
 	
-	
 func on_mouse_exited():
 	if disabled:
 		return
@@ -71,4 +70,6 @@ func on_mouse_exited():
 func on_in_finished():
 	gui_input.connect(on_gui_input)
 	mouse_entered.connect(on_mouse_entered)
+	focus_entered.connect(on_mouse_entered)
 	mouse_exited.connect(on_mouse_exited)
+	focus_exited.connect(on_mouse_exited)

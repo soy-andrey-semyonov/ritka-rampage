@@ -11,6 +11,7 @@ var is_closing := false
 
 
 func _ready() -> void:
+	resume_button.grab_focus()
 	animation_player.play("default")
 	GlobalActions.pause_game()
 	panel_container.pivot_offset = panel_container.size / 2
@@ -23,7 +24,7 @@ func _ready() -> void:
 	
 	
 func _unhandled_input(event: InputEvent) -> void:
-	if event.is_action_pressed("pause"):
+	if event.is_action_pressed("pause") or event.is_action_pressed("ui_cancel"):
 		close()
 		get_tree().root.set_input_as_handled()
 	
@@ -51,10 +52,9 @@ func on_settings_pressed():
 
 func on_settings_back_pressed(settings_menu: SettingsMenu):
 	settings_menu.queue_free()
+	settings_button.grab_focus()
 
 
 func on_quit_pressed():
 	GlobalActions.unpause_game()
 	get_tree().change_scene_to_file("res://scenes/ui/menus/main_menu/main_menu.tscn")
-	
-	
